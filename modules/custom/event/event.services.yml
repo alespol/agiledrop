@@ -1,0 +1,5 @@
+## YAML Template.
+services:
+  event.eventstatus:
+    class: Drupal\event\Services\EventStatus
+    arguments: []

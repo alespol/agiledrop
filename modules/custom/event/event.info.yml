@@ -1,0 +1,11 @@
+## YAML Template.
+name: Event Block
+description: A simple module to demonstrate simple tasks.
+core: 8.x
+package: Custom
+dependencies:
+- node
+- block
+type: module
+options:
+    no_cache: 'TRUE'
