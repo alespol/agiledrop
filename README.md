@@ -1,6 +1,6 @@
-# drupal 8 custom module
+# drupal 8 custom block
 
-DRUPAL8 CUSTOM BLOCK/SERVICE MODULE
+DRUPAL8 CUSTOM BLOCK USING SERVICE 
 
 ---
 Create a custom block which will be displayed in the sidebar on event
