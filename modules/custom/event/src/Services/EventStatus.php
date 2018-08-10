@@ -12,11 +12,11 @@ use Drupal\Component\Datetime\DateTimePlus;
  * @package Drupal\eventstatus
  */
 class EventStatus {
-  public function getStatus($n) {
-    $node = Node::load($n);
-    $w = $node->get('field_event_date')->getValue();
+  public function getStatus($d) {
+    #$node = Node::load($n);
+    #$w = $node->get('field_event_date')->getValue();
     $now = time();
-    $event_date = strtotime($w[0]['value']);
+    $event_date = strtotime($d);
     $datediff = $now - $event_date;
     
     $days = round($datediff / (60 * 60 * 24));
