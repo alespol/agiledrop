@@ -16,8 +16,8 @@ class EventStatus {
     $node = Node::load($n);
     $w = $node->get('field_event_date')->getValue();
     $now = time();
-    $your_date = strtotime($w[0]['value']);
-    $datediff = $now - $your_date;
+    $event_date = strtotime($w[0]['value']);
+    $datediff = $now - $event_date;
     
     $days = round($datediff / (60 * 60 * 24));
     if($days == 0):
