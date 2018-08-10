@@ -29,8 +29,6 @@ class EventBlock extends BlockBase {
     #\Drupal::service('page_cache_kill_switch')->trigger();
     $node = \Drupal::routeMatch()->getParameter('node');
     if ($node instanceof \Drupal\node\NodeInterface) {
-        #$nid = $node->id();
-        #$node = Node::load($n);
         $event_date = $node->get('field_event_date')->getValue();
         $status = \Drupal::service('event.eventstatus')->getStatus($event_date[0]['value']);
         $output = $status;

@@ -13,8 +13,6 @@ use Drupal\Component\Datetime\DateTimePlus;
  */
 class EventStatus {
   public function getStatus($d) {
-    #$node = Node::load($n);
-    #$w = $node->get('field_event_date')->getValue();
     $now = time();
     $event_date = strtotime($d);
     $datediff = $now - $event_date;
