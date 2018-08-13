@@ -18,12 +18,6 @@ class EventStatus {
     $datediff = $now - $event_date;
     
     $days = round($datediff / (60 * 60 * 24));
-    if($days == 0):
-        return 'The event is in progress.';
-    elseif($days>0):
-        return 'The event has ended.';
-    elseif($days<0):
-        return 'Days left to event start: '.abs($days);
-    endif;
+    return $days;
   }
 }
