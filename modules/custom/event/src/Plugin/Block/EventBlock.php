@@ -32,13 +32,13 @@ class EventBlock extends BlockBase {
         $event_date = $node->get('field_event_date')->getValue();
         $status = \Drupal::service('event.eventstatus')->getStatus($event_date[0]['value']);
                 
-      if($status == 0):
-        $output = 'Event is in progress.';
-      elseif($status>0):
-        $output = 'The event has ended.';
-      elseif($status<0):
-        $output = 'Days left to event start: '.abs($days);
-      endif;
+        if($status == 0):
+          $output = 'Event is in progress.';
+        elseif($status>0):
+          $output = 'The event has ended.';
+        elseif($status<0):
+          $output = 'Days left to event start: '.abs($days);
+        endif;
       
         return array(
           '#type' => 'markup',
