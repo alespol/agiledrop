@@ -37,7 +37,7 @@ class EventBlock extends BlockBase {
         elseif($status>0):
           $output = 'The event has ended.';
         elseif($status<0):
-          $output = 'Days left to event start: '.abs($days);
+          $output = 'Days left to event start: '.abs($status);
         endif;
       
         return array(
