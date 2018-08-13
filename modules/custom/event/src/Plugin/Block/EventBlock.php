@@ -37,11 +37,6 @@ class EventBlock extends BlockBase {
           #'#cache'['max-age'] => 0,
           '#markup' => $this->t($output),
         );
-    }else{
-        return array(
-          '#type' => 'markup',
-          '#markup' => 'This is not an event content type.', 
-        );
     }
     
   }
